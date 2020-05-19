@@ -1,25 +1,19 @@
-#include <conio.h>
 #include <stdio.h>
-int main()
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+#include <string.h>
+main()
 {
- int i, v[10], v_aux;
- for (i = 0; i < 10; i++)
- {
-  printf("Informe o valor de Vetor[%d]: ", i+1);
-  scanf("%d", &v[i]);
- }
- printf("Vetor:");
- for (i = 0; i < 10; i++){
-     printf(" %d ", v[i]);
-
- v_aux = v[i];
- }
-
- printf("\nVetor Invertido:");
-
- v_aux-- ;
- for (i = v_aux ; i >= 0 ; i--){
- printf(" %d ", v [i]);
- }
-getche();
+int x,y,tam;
+char nome[10];
+printf("Digite uma palavra de dez caracteres: ");
+gets(nome);
+tam = strlen(nome);
+printf("\n A palavra de tras pra frente e: ");
+for (x=tam-1; x >= 0; x--)
+printf("%c",nome[x]);
+printf("\n\n");
+system("pause");
+return 0;
 }
